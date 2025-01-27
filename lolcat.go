@@ -21,7 +21,7 @@ func clear() {
 	fmt.Print("\033[H\033[2J")
 }
 
-func print(str string) {
+func Print(str string) {
 	for pos, char := range str {
 		r, g, b := rgb(pos)
 		fmt.Printf("\033[38;2;%d;%d;%dm%c\033[0m", r, g, b, char)
@@ -50,5 +50,5 @@ func main() {
 		j++
 	}
 
-	print(strings.Join(str, ""))
+	Print(strings.Join(str, ""))
 }
